@@ -7,143 +7,158 @@ Dark green: #28b485
 
 */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /*default font-size : 16px ---> 10px*/
 }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #777;
-  padding: 30px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #777;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 .header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, #7ed56fb9, #28b485b9),
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, #7ed56fb9, #28b485b9),
     url("../img/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative;
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
 }
 
 .logo-box {
-  position: absolute;
-  top: 40px;
-  left: 40px;
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-  height: 35px;
+    height: 3.5rem;
 }
+
 .text-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .heading-primary {
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-  text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-transform: uppercase;
 }
+
 .heading-primary-main {
-  font-size: 60px;
-  font-weight: 400;
-  letter-spacing: 35px;
-  animation: moveInLeft 1000ms linear;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 1000ms linear;
 }
+
 .heading-primary-sub {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 17px;
-  animation: moveInRight 1s linear;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    animation: moveInRight 1s linear;
 }
 
 @keyframes moveInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes moveInRight {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .btn:link,
 .btn:visited {
-  text-transform: uppercase;
-  margin: 60px auto;
-  padding: 15px 40px;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 100px;
-  position: relative;
-  transition: all 300ms;
+    text-transform: uppercase;
+    margin: 6rem auto;
+    padding: 1.5rem 4rem;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10rem;
+    position: relative;
+    transition: all 300ms;
 }
+
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
+
 .btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 }
+
 .btn-white {
-  background-color: #fff;
-  color: #777;
+    background-color: #fff;
+    color: #777;
 }
+
 .btn-white::after {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 .btn::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 400ms linear;
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 400ms linear;
 }
+
 .btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
 }
 
 @keyframes btnShow {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.btn-animated{
-  animation: btnShow 0.7s ease-out .5s backwards;
+.btn-animated {
+    animation: btnShow 0.7s ease-out .5s backwards;
 }
