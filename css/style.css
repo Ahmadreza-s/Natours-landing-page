@@ -39,17 +39,17 @@ body {
     position: relative;
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo {
+.header__logo {
     height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,14 +64,14 @@ body {
     text-transform: uppercase;
 }
 
-.heading-primary-main {
+.heading-primary--main {
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation: moveInLeft 1000ms linear;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.5rem;
@@ -122,12 +122,12 @@ body {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
 
@@ -159,6 +159,6 @@ body {
     }
 }
 
-.btn-animated {
+.btn--animated {
     animation: btnShow 0.7s ease-out .5s backwards;
 }
